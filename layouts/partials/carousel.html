@@ -1,28 +1,305 @@
 {{ if isset .Site.Params "carousel" }}
 {{ if .Site.Params.carousel.enable }}
 {{ if gt (len .Site.Data.carousel) 0 }}
-<section>
-    <div class="home-carousel">
-        <div class="dark-mask"></div>
-        <div class="container">
-            <div class="homepage owl-carousel">
-                {{ range sort .Site.Data.carousel "weight" }}
-                <div class="item">
-                    <div class="row">
-                        <div class="col-sm-5 right">
-                            <h1>{{ .title }}</h1>
-                            {{ .description | safeHTML }}
-                        </div>
-                        <div class="col-sm-7">
-                            <img class="img-responsive" src="{{ .image }}" alt="">
-                        </div>
-                    </div>
-                </div>
-                {{ end }}
-            </div>
-            <!-- /.project owl-slider -->
+<section class="no-mb">
+    <div class="rev_slider_wrapper">
+        <!-- the ID here will be used in the inline JavaScript below to initialize the slider -->
+        <div id="rev_slider_1" class="rev_slider" style="display:none">
+
+            <ul>
+                <!-- MINIMUM SLIDE STRUCTURE -->
+                <li data-transition="slideoverhorizontal">
+
+                    <!-- SLIDE'S MAIN BACKGROUND IMAGE -->
+                    <img src="img/carousel/background/3.jpg" alt="Sky" class="rev-slidebg">
+                    <div class="tp-caption tp-resizeme very_large_text"
+                         data-frames='[{
+						 "delay":1000,
+						 "speed":1500,
+						 "frame":"0",
+						 "from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;",
+						 "to":"o:1;",
+						 "ease":"Power4.easeOut"
+						 },{
+						 "delay":"wait",
+						 "speed":300,
+						 "frame":"999",
+						 "to":"auto:auto;",
+						 "ease":"Power3.easeInOut"
+						 }]'
+
+                         data-x="left"
+                         data-y="center"
+                         data-hoffset="-130"
+                         data-voffset="-110"
+                         data-width="['auto']"
+                         data-height="['auto']"
+
+                    >Мы не продаем -<br>мы помогаем купить!</div><!-- END BASIC TEXT LAYER -->
+                    <div class="tp-caption tp-resizeme"
+                         data-frames='[{"delay":1500,"speed":500,"frame":"0","from":"y:bottom;","to":"o:1;","ease":"Power3.easeInOut"},
+						 {"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+
+                         data-type="image"
+                         data-x="right"
+                         data-y="bottom"
+                         data-hoffset="-350"
+                         data-voffset="-80"
+                         data-width="['auto']"
+                         data-height="['auto']"
+
+                    ><img src="img/carousel/director3.png"></div><!-- END BASIC TEXT LAYER -->
+
+                </li>
+
+                <!-- MINIMUM SLIDE STRUCTURE -->
+                <li data-transition="slideoverhorizontal">
+                    <!-- SLIDE'S MAIN BACKGROUND IMAGE -->
+                    <img src="img/carousel/background/6.jpg" alt="Ocean" class="rev-slidebg">
+                    <div class="tp-caption tp-resizeme very_large_text"
+                         data-frames='[{
+						 "delay":1000,
+						 "speed":1500,
+						 "frame":"0",
+						 "from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;",
+						 "to":"o:1;",
+						 "ease":"Power4.easeOut"
+						 },{
+						 "delay":"wait",
+						 "speed":300,
+						 "frame":"999",
+						 "to":"auto:auto;",
+						 "ease":"Power3.easeInOut"
+						 }]'
+
+                         data-x="left"
+                         data-y="center"
+                         data-hoffset="50"
+                         data-voffset="-170"
+                         data-width="['auto']"
+                         data-height="['auto']"
+                    >Самые низкие цены<br/>на ветеринарные наборы!</div>
+                    <div class="tp-caption tp-resizeme medium_bg_asbestos"
+                         data-frames='[{
+						 "delay":1000,
+						 "speed":1500,
+						 "frame":"0",
+						 "from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;",
+						 "to":"o:1;",
+						 "ease":"Power4.easeOut"
+						 },{
+						 "delay":"wait",
+						 "speed":300,
+						 "frame":"999",
+						 "to":"auto:auto;",
+						 "ease":"Power3.easeInOut"
+						 }]'
+
+                         data-x="left"
+                         data-y="center"
+                         data-hoffset="50"
+                         data-voffset="-70"
+                         data-width="['auto']"
+                         data-height="['auto']"
+                    >Ознакомьтесь и закажите сейчас!</div>
+                    <div class="tp-caption tp-resizeme"
+                         data-frames='[{"delay":1500,"speed":500,"frame":"0","from":"y:bottom;","to":"o:1;","ease":"Power3.easeInOut"},
+						 {"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+
+                         data-type="image"
+                         data-x="center"
+                         data-y="bottom"
+                         data-hoffset="0"
+                         data-voffset="0"
+                         data-width="['auto']"
+                         data-height="['auto']"
+
+                    ><img src="img/carousel/animals.png"></div><!-- END BASIC TEXT LAYER -->
+                </li>
+
+                <li data-transition="slideoverhorizontal">
+                    <!-- SLIDE'S MAIN BACKGROUND IMAGE -->
+                    <img src="img/carousel/background/10.jpg" alt="Ocean" class="rev-slidebg">
+
+                    <div class="tp-caption tp-resizeme large_text"
+                         data-frames='[{"delay":1000,"speed":500,"frame":"0","from":"y:bottom;","to":"o:1;","ease":"Power3.easeInOut"},
+						 {"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+
+                         data-x="left"
+                         data-y="top"
+                         data-hoffset="30"
+                         data-voffset="20"
+                         data-width="['auto']"
+                         data-height="['auto']"
+
+                    >- Доставка товара во все регионы России,<br/>ᅠа также страны Ближнего Зарубежья<br/>ᅠлюбым видом транспорта</div>
+
+                    <div class="tp-caption tp-resizeme large_text"
+                         data-frames='[{"delay":1500,"speed":500,"frame":"0","from":"y:bottom;","to":"o:1;","ease":"Power3.easeInOut"},
+						 {"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+
+                         data-x="left"
+                         data-y="top"
+                         data-hoffset="30"
+                         data-voffset="150"
+                         data-width="['auto']"
+                         data-height="['auto']"
+
+                    >- Продажа по оптовым ценам</div>
+
+                    <div class="tp-caption tp-resizeme large_text"
+                         data-frames='[{"delay":2000,"speed":500,"frame":"0","from":"y:bottom;","to":"o:1;","ease":"Power3.easeInOut"},
+						 {"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+
+                         data-x="left"
+                         data-y="top"
+                         data-hoffset="30"
+                         data-voffset="200"
+                         data-width="['auto']"
+                         data-height="['auto']"
+
+                    >- Индивидуальный подход к каждому клиенту</div>
+
+                    <div class="tp-caption tp-resizeme large_text"
+                         data-frames='[{"delay":2500,"speed":500,"frame":"0","from":"y:bottom;","to":"o:1;","ease":"Power3.easeInOut"},
+						 {"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+
+                         data-x="left"
+                         data-y="top"
+                         data-hoffset="30"
+                         data-voffset="250"
+                         data-width="['auto']"
+                         data-height="['auto']"
+
+                    >- Партнерские программы</div>
+
+                    <div class="tp-caption tp-resizeme large_text"
+                         data-frames='[{"delay":3000,"speed":500,"frame":"0","from":"y:bottom;","to":"o:1;","ease":"Power3.easeInOut"},
+						 {"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+
+                         data-x="left"
+                         data-y="top"
+                         data-hoffset="30"
+                         data-voffset="300"
+                         data-width="['auto']"
+                         data-height="['auto']"
+
+                    >- Оперативность и надежность: 30 лет на рынке</div>
+
+                    <div class="tp-caption tp-resizeme large_text"
+                         data-frames='[{"delay":3500,"speed":500,"frame":"0","from":"y:bottom;","to":"o:1;","ease":"Power3.easeInOut"},
+						 {"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+
+                         data-x="left"
+                         data-y="top"
+                         data-hoffset="30"
+                         data-voffset="350"
+                         data-width="['auto']"
+                         data-height="['auto']"
+
+                    >- Широкий ассортимент товаров</div>
+
+                    <div class="tp-caption tp-resizeme large_text"
+                         data-frames='[{"delay":4000,"speed":500,"frame":"0","from":"y:bottom;","to":"o:1;","ease":"Power3.easeInOut"},
+						 {"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+
+                         data-x="left"
+                         data-y="top"
+                         data-hoffset="30"
+                         data-voffset="400"
+                         data-width="['auto']"
+                         data-height="['auto']"
+
+                    >- Возможность поштучных заказов</div>
+                    <!-- END BASIC TEXT LAYER -->
+                </li>
+                <!-- MINIMUM SLIDE STRUCTURE -->
+                <li data-transition="slideoverhorizontal">
+                    <!-- SLIDE'S MAIN BACKGROUND IMAGE -->
+                    <img src="img/carousel/background/1dark.jpg" alt="Ocean" class="rev-slidebg">
+                    <div class="tp-caption tp-resizeme very_large_text"
+                         data-frames='[{
+						 "delay":1000,
+						 "speed":1500,
+						 "frame":"0",
+						 "from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;",
+						 "to":"o:1;",
+						 "ease":"Power4.easeOut"
+						 },{
+						 "delay":"wait",
+						 "speed":300,
+						 "frame":"999",
+						 "to":"auto:auto;",
+						 "ease":"Power3.easeInOut"
+						 }]'
+
+                         data-actions='[{
+
+							"event": "click",
+							"action": "simplelink",
+							"target": "_self",
+							"url": "/contact"
+
+						 }]'
+
+                         data-x="center"
+                         data-y="center"
+                         data-hoffset="0"
+                         data-voffset="-80"
+                         data-width="['auto']"
+                         data-height="['auto']"
+                    >Наши контакты</div>
+                    <div class="tp-caption tp-resizeme medium_bg_asbestos"
+                         data-frames='[{
+						 "delay":1000,
+						 "speed":1500,
+						 "frame":"0",
+						 "from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;",
+						 "to":"o:1;",
+						 "ease":"Power4.easeOut"
+						 },{
+						 "delay":"wait",
+						 "speed":300,
+						 "frame":"999",
+						 "to":"auto:auto;",
+						 "ease":"Power3.easeInOut"
+						 }]'
+
+                         data-x="center"
+                         data-y="center"
+                         data-hoffset="0"
+                         data-voffset="-20"
+                         data-width="['auto']"
+                         data-height="['auto']"
+                    >Готовы ответить на ваши вопросы!</div>
+                    <div class="tp-caption tp-resizeme very_large_text"
+                         data-frames='[{
+						 "delay":1000,
+						 "speed":1500,
+						 "frame":"0",
+						 "from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;",
+						 "to":"o:1;",
+						 "ease":"Power4.easeOut"
+						 },{
+						 "delay":"wait",
+						 "speed":300,
+						 "frame":"999",
+						 "to":"auto:auto;",
+						 "ease":"Power3.easeInOut"
+						 }]'
+
+                         data-x="center"
+                         data-y="center"
+                         data-hoffset="0"
+                         data-voffset="60"
+                         data-width="['auto']"
+                         data-height="['auto']"
+                    >+7 (903) 341-78-42</div><!-- END BASIC TEXT LAYER -->
+                </li>
+            </ul>
         </div>
     </div>
+
 </section>
 {{ end }}
 {{ end }}
